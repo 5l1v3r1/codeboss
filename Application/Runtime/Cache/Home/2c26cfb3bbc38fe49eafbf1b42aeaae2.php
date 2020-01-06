@@ -49,7 +49,7 @@
     <div class="signmain">
     <div class="signcenter">
         <div class="signinputA">
-            <form id="w0" class="sign-form" action="/signup" method="post" data-toggle="validator" role="form">
+            <form id="w0" class="sign-form" action="<?php echo U('Index/post_signup_email');;?>" method="post" data-toggle="validator" role="form">
                 <div class="form-group field-signupform-username required">
                     <div class="form-group">
                     <label  class="control-label" for="signupform-username">用户名</label>
@@ -78,20 +78,20 @@
             <div class="form-group">
                 <label class="control-label" for="signupform-email">邮箱</label>
                 <p style="font-size:12px;margin-top:-10px;" class="help-block with-errors help-block-error"></p>
-                <input type="email" id="email" class="form-control" name="inputemail" required />
+                <input type="email" id="email" class="form-control" name="email" required />
             </div>
         </div>            
         <div class="form-group field-signupform-promoterstring">
             <div class="form-group">
-            <label class="control-label" for="signupform-promoterstring">推广员</label>(可选)
+            <label class="control-label" for="signupform-promoterstring">推广员ID</label>(可选)
             <p style="font-size:12px;margin-top:-10px;" class="help-block with-errors help-block-error"></p>
-            <input type="text" id="signupform-promoterstring" class="form-control" name="SignupForm[PromoterString]">
+            <input type="text" id="signupform-promoterstring" class="form-control" name="promoterid">
             <p class="help-block help-block-error"></p></div>
         </div>            
         <div id="w1div"></div> 
         <div class="form-group field-signupform-promoterstring">
             <div class="form-group">
-                <div class="g-recaptcha" data-callback="robotVerified" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                <div class="g-recaptcha" data-callback="robotVerified" data-sitekey="<?php echo C('RECAPTCHAR');;?>"></div>
                 <input type="hidden" id="tokenstring" class="form-control" name="tokenstring">
             </div>
         </div>

@@ -9,4 +9,85 @@ class IndexController extends Controller {
     public function signup(){
         $this->display(T('home/signuppage'));
     }
+    /* google login:
+    EMAIL ,FULL NAME ,IMAGE URL 
+    WECHAT
+    UNINID,nickname, image url
+    
+     */
+    public function post_signup_email(){
+        $data['username']= I('post.username','','htmlspecialchars');//get name
+        $data['password']= I('post.password','','htmlspecialchars');//get name
+        $data['email']= I('post.email','','htmlspecialchars');//get name
+        $data['uid'] = $data['email'];
+        $data['tokenstring'] = I('post.tokenstring','','htmlspecialchars');//get name
+        /* check */
+        $cflag = 1;
+        $pattern = '/^\w+$/';
+        $matches = array();
+        preg_match($pattern, $data['username'], $matches);
+        if(count($matches) == 0 || strlen($data['username']) >30){
+            $cflag = 0;
+            //echo count($matches) ;
+        }
+        
+        $pattern = '/^[\w_-]{6,16}$/';
+        $matches = array();
+        preg_match($pattern, $data['password'], $matches);
+        if(count($matches) == 0 || strlen($data['username']) >16 || strlen($data['username']) <6){
+            $cflag = 0;
+        }
+        
+        $pattern = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
+        $matches = array();
+        preg_match($pattern, $data['email'], $matches);
+        if(count($matches) == 0){
+            $cflag = 0;
+        }
+        if(strlen($data['tokenstring']) == 0){
+            $cflag = 0;
+        }
+        if($cflag == 0){
+            //$this->error(' '.$data['uid'].' '.C('REGISTER_INPUT_ERROR'), U('Index/index'),3);
+        }
+        /* check end */
+
+
+
+        //$data['promoterid']= I('post.promoterid','','htmlspecialchars');//get name
+        $Users = M('users');
+        $content = $Users->field('uid,register_code')->where($data)->find();
+        if(!empty($content))//exist
+        {
+            if($content["register_code"] >=100000 && $content["register_code"] <=999999){
+                //resend email
+            }else{
+                $this->error(' '.$data['uid'].' '.C('REGISTER_EXIST_ERROR'), U('Index/index'),3);
+            }
+            
+
+        }
+        else{
+            $data['register_code'] = rand(100000,999999);
+            $data['usertype'] = 'email';
+            print_r($data);
+            $resflag = $Users->data($data)->add();
+            echo $resflag;
+            if($resflag == 1){
+                //$this->success(C('REGISTER_SUCCESS'),U('Order/orderlist?flag='.$flag),1);
+                echo C('REGISTER_SUCCESS');
+                //send email
+            }else{
+                $this->error(C('REGISTER_FAIL'), U('Index/index'),3); 
+            }
+
+        }
+
+    }
+    public function get_password(){
+        $this->display(T('home/findpwdpage'));
+    }
+    public function post_find_pwd(){
+        //$this->display(T('home/findpwdpage'));
+    }
 }
