@@ -7,38 +7,32 @@ class CommonController extends Controller
 {
 	public function _initialize()
 	{
-		if(empty(session('admin_uid')))
+		if(empty(cookie('tokenstr')))
 		{
-			//echo __SELF__;
-			//echo __APP__;
-			$urltmp = str_replace(__APP__."/","",__SELF__);
-			//echo $urltmp;
-			//echo $urltmp;
-			$urltmpenc = "";
-			if(!empty($urltmp)){
-				$urltmpenc = str_replace(array('+', '/'), array('-', '_'), base64_encode($urltmp));
-				//echo $urltmpenc;
-			}
-			$this->error(C('LOGIN_TIPS'),U('Login/index?redirect='.$urltmpenc.''),3);
-			//exit(0);
+			$this->error(C('Login_INFO'), U('Index/index'),3);
 			return 0;
 		}else//whether is superadmin or not
 		{
-			$pwdtxt = encryptDecrypt('3330', session('admin_uid'),0);
-			//echo $pwdtxt;
-			//exit();
-			$auth =new Auth();
-			//echo MODULE_NAME.'-'.CONTROLLER_NAME.'-'.ACTION_NAME;
-			//echo cookie('admin_uid');
-			//echo $pwdtxt."<br>";
-			//echo substr($pwdtxt , 17);
-			//exit(0);
-			if(!$auth->check(strtolower(MODULE_NAME.'-'.CONTROLLER_NAME.'-'.ACTION_NAME),substr($pwdtxt , 17)))
-			{
-				//echo U('Login/index?modulename='.CONTROLLER_NAME.'');
-				$this->error(C('PERMISSION_DENIED_WARNING'), U('Login/index'),3);
-				return 0;
+			$ip = getIp();
+			//$ip."$".$uid.'$'.$randomcode;
+			$decval = decryptLoginToken(cookie('tokenstr'),$ip);
+			$resarray = explode("$",$decval);
+			if(count($resarray) == 3 && $resarray[0] == $ip){
+				$map['uid'] = $resarray[1];
+				$randomflag = $resarray[2];
+				$Users = M('users');
+				$content = $Users->field('uid,register_code,randomcode')->where($map)->find();
+				if($content["randomcode"] != $randomflag){
+					$this->error(C('Login_INFO'), U('Index/index'),3);
+				}
+				/*else{
+					echo "y";
+				}*/
+			}else{
+				$this->error(C('Login_INFO'), U('Index/index'),3);
 			}
+        	//$content = $Users->field('uid,register_code')->where($data)->find();
+			//$decval = decryptLoginToken(cookie('tokenstr'),$data['randomcode']);
 			
 		}
 	}

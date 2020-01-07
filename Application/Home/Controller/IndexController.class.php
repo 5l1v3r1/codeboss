@@ -20,7 +20,7 @@ class IndexController extends Controller {
         $data['password']= I('post.password','','htmlspecialchars');//get name
         $data['email']= I('post.email','','htmlspecialchars');//get name
         $data['uid'] = $data['email'];
-        $data['tokenstring'] = I('post.tokenstring','','htmlspecialchars');//get name
+        $tokenstring = I('post.tokenstring','','htmlspecialchars');//get name
         /* check */
         $cflag = 1;
         $pattern = '/^\w+$/';
@@ -44,11 +44,11 @@ class IndexController extends Controller {
         if(count($matches) == 0){
             $cflag = 0;
         }
-        if(strlen($data['tokenstring']) == 0){
+        if(strlen($tokenstring) == 0){
             $cflag = 0;
         }
         if($cflag == 0){
-            //$this->error(' '.$data['uid'].' '.C('REGISTER_INPUT_ERROR'), U('Index/index'),3);
+            $this->error(' '.$data['uid'].' '.C('REGISTER_INPUT_ERROR'), U('Index/index'),3);
         }
         /* check end */
 
@@ -59,23 +59,25 @@ class IndexController extends Controller {
         $content = $Users->field('uid,register_code')->where($data)->find();
         if(!empty($content))//exist
         {
-            if($content["register_code"] >=100000 && $content["register_code"] <=999999){
-                //resend email
-            }else{
-                $this->error(' '.$data['uid'].' '.C('REGISTER_EXIST_ERROR'), U('Index/index'),3);
-            }
-            
-
+            $this->error(' '.$data['uid'].' '.C('REGISTER_EXIST_ERROR'), U('Index/index'),3);
         }
         else{
             $data['register_code'] = rand(100000,999999);
             $data['usertype'] = 'email';
-            print_r($data);
+            $data['loginip'] = getIp();
+            $data['randomcode'] = substr($tokenstring,8,6);
+            $cookie_val = generateLoginToken($data['uid'],$data['loginip'],$data['randomcode']);
+            cookie('tokenstr',$cookie_val,3600*24);
+            //echo $cookie_val;
+            //echo "<br>";
+            //$decval = decryptLoginToken($cookie_val,$data['loginip']);
+            //echo $decval;
             $resflag = $Users->data($data)->add();
-            echo $resflag;
+            //echo $resflag;
             if($resflag == 1){
                 //$this->success(C('REGISTER_SUCCESS'),U('Order/orderlist?flag='.$flag),1);
                 echo C('REGISTER_SUCCESS');
+                $this->success(C('REGISTER_SUCCESS'),U('Panel/index'),1);
                 //send email
             }else{
                 $this->error(C('REGISTER_FAIL'), U('Index/index'),3); 

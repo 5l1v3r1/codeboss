@@ -79,7 +79,9 @@
                 <label class="control-label" for="signupform-email">邮箱</label>
                 <p style="font-size:12px;margin-top:-10px;" class="help-block with-errors help-block-error"></p>
                 <input type="email" id="email" class="form-control" name="email" required />
+                
             </div>
+            <p style="color:#F06541;font-size:12px;margin-top:-10px;">邮箱注册成功不可更改，请一定注意</p>
         </div>            
         <div class="form-group field-signupform-promoterstring">
             <div class="form-group">

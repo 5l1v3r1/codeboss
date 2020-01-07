@@ -6,4 +6,5 @@ return array(
 	'REGISTER_INPUT_ERROR'=>' INPUT ERROR!',
 	'REGISTER_SUCCESS'=>' Register se! email get check code to confirm ',
 	'REGISTER_FAIL'=>' CONTACT KEFU',
+	'Login_INFO' => 'Please login again!'
 );
