@@ -9,4 +9,7 @@ class PanelController extends CommonController {
     public function account_page(){
         $this->display(T('home/panel_account_show'));
     }
+    public function recharge_page(){
+        $this->display(T('home/panel_recharge_show'));
+    }
 }

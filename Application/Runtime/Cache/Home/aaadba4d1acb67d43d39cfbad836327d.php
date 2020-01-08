@@ -1,4 +1,4 @@
-
+<?php if (!defined('THINK_PATH')) exit();?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -9,8 +9,8 @@
     <title>注册_PaperPass论文检测</title>
     <meta  name="description" content="★PaperPass★论文检测-全球首个中文论文相似度检测网站;提供论文查重,免费论文检测系统,毕业论文抄袭检测。最权威,动态指纹技术保障,已服务超300万人论文检测。"/>
     <meta name="keywords" content="论文,论文检测,论文查重,免费论文检测,检测系统,论文抄袭,毕业论文"/>
-    <link href="__PUBLIC__/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="__PUBLIC__/css/codecheck.css" rel="stylesheet">
+    <link href="/codeboss/Public/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/codeboss/Public/css/codecheck.css" rel="stylesheet">
 </head>
 <body>
     <header class="navtop">
@@ -23,7 +23,7 @@
             <li ><a href="/panel/report">查看报告</a></li>
             <li ><a href="/panel/selfbuild">自建库</a></li>
             <li class="active"><a href="/panel/account">账户</a></li>
-            <li ><a href="{:U('Panel/recharge_page');}">充值中心</a></li>
+            <li ><a href="<?php echo U('Panel/recharge_page');;?>">充值中心</a></li>
             <li ><a href="/panel/promotion">推广赚钱</a></li>
             <li ><a href="/panel/free">免费使用</a></li>
             <li><a href="https://pdf.wps.cn/?from=paperpass_normal&payconfig=pdf_module&position=paperpass_normal" target="_blank">PDF转换</a></li>
@@ -112,9 +112,9 @@
 
         </div>
     </div>
-    <script src="__PUBLIC__/js/jquery.js"></script>
-    <script src="__PUBLIC__/bootstrap/bootstrap.js"></script>
-    <script src="__PUBLIC__/js/autowidth.js"></script>
+    <script src="/codeboss/Public/js/jquery.js"></script>
+    <script src="/codeboss/Public/bootstrap/bootstrap.js"></script>
+    <script src="/codeboss/Public/js/autowidth.js"></script>
 </body>
 
 </html>

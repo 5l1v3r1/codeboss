@@ -20,7 +20,15 @@
         <![endif]-->
         <div class="topimg pull-left"><a href="/"><img src="/images/tool/logo.jpg" class="topimgsize"></a></div>
         <ul class="nav-tabs userpaper pull-left">
-        <li class="active"><a href="/panel/index">提交论文</a></li><li ><a href="/panel/report">查看报告</a></li><li ><a href="/panel/selfbuild">自建库</a></li><li ><a href="/panel/account">账户</a></li><li ><a href="/panel/purchase">充值中心</a></li><li ><a href="/panel/promotion">推广赚钱</a></li><li ><a href="/panel/free">免费使用</a></li><li><a href="https://pdf.wps.cn/?from=paperpass_normal&payconfig=pdf_module&position=paperpass_normal" target="_blank">PDF转换</a></li><li><a href="/kuai/go" target="_blank">自动排版</a></li>         </ul>
+        <li class="active"><a href="/panel/index">提交论文</a></li>
+        <li ><a href="/panel/report">查看报告</a></li>
+        <li ><a href="/panel/selfbuild">自建库</a></li>
+        <li ><a href="<?php echo U('Panel/account_page');;?>">账户</a></li>
+        <li ><a href="/panel/purchase">充值中心</a></li>
+        <li ><a href="/panel/promotion">推广赚钱</a></li>
+        <li ><a href="/panel/free">免费使用</a></li>
+        <li><a href="https://pdf.wps.cn/?from=paperpass_normal&payconfig=pdf_module&position=paperpass_normal" target="_blank">PDF转换</a></li>
+        <li><a href="/kuai/go" target="_blank">自动排版</a></li>         </ul>
         <div class="toploginfo pull-right">
             <div class="headimg">
                 <img src="/images/tool/user.png">
