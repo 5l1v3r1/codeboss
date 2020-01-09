@@ -62,4 +62,6 @@ function decryptLoginToken($token,$ip){
     return $dec_tokenstring;
 
 }
+/* verify code generate */
+
 ?>

@@ -6,5 +6,8 @@ return array(
 	'REGISTER_INPUT_ERROR'=>' INPUT ERROR!',
 	'REGISTER_SUCCESS'=>' Register se! email get check code to confirm ',
 	'REGISTER_FAIL'=>' CONTACT KEFU',
-	'Login_INFO' => 'Please login again!'
+	'Login_INFO' => 'Please login again!',
+
+	'VERIYCODE_INPUT_ERROR' => 'VERIYCODE ERROR',
+	'CARD_INPUT_ERROR' => 'CARD IS NOT EXIST!'
 );

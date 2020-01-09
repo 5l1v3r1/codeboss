@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 08, 2020 at 01:54 AM
+-- Generation Time: Jan 08, 2020 at 07:55 PM
 -- Server version: 5.7.28-0ubuntu0.16.04.2-log
 -- PHP Version: 5.6.37-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -28,11 +28,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `db_cards` (
   `cardid` char(20) COLLATE utf8_unicode_ci NOT NULL,
-  `checkcode` char(10) COLLATE utf8_unicode_ci NOT NULL,
+  `checkcode` char(8) COLLATE utf8_unicode_ci NOT NULL,
   `money` int(11) NOT NULL,
   `createdate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `uid` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `recharge_time` datetime DEFAULT NULL,
   `description` varchar(128) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `db_cards`
+--
+
+INSERT INTO `db_cards` (`cardid`, `checkcode`, `money`, `createdate`, `uid`, `recharge_time`, `description`) VALUES
+('ecad1234567812345678', '12345678', 30, '2020-01-09 11:43:08', '', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -75,11 +84,17 @@ CREATE TABLE `db_users` (
 --
 
 INSERT INTO `db_users` (`uid`, `username`, `password`, `email`, `image_url`, `createtime`, `register_code`, `usertype`, `loginip`, `randomcode`) VALUES
-('0@0.com', 'afe123_', '123456', '0@0.com', 'head.gif', '2020-01-08 10:59:28', 206420, 'email', '127.0.0.1', 'Sg5SDI');
+('0@0.com', 'afe123_', '123456', '0@0.com', 'head.gif', '2020-01-09 11:01:02', 956491, 'email', '127.0.0.1', 'TsAwiU');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `db_cards`
+--
+ALTER TABLE `db_cards`
+  ADD PRIMARY KEY (`cardid`);
 
 --
 -- Indexes for table `db_cards_users`
