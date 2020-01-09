@@ -19,8 +19,8 @@
         <![endif]-->
         <div class="top_con">
             <div class="topimg pull-left"><a href="/" class="topimgsize"></a></div>
-                            <div class="topbtn pull-right">
-                    <a href="/login" class="btn_login">登录</a>
+                <div class="topbtn pull-right">
+                    <a href="<?php echo U('Index/login');;?>" class="btn_login">登录</a>
                     <a href="<?php echo U('Index/signup');;?>" class="btn_sign">注册</a>
                 </div>
                         <ul class="topnav pull-right">

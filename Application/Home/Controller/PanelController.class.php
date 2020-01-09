@@ -33,6 +33,7 @@ class PanelController extends CommonController {
         $this->display(T('home/panel_account_show'));
     }
     public function recharge_page(){
+        //echo $g_uid;
         $this->display(T('home/panel_recharge_show'));
     }
     public function post_recharge(){
@@ -45,11 +46,22 @@ class PanelController extends CommonController {
             session('cks',null);
             $this->error(C('VERIYCODE_INPUT_ERROR'), U('Panel/recharge_page'),3);
         }
+        
         session('cks',null);
         $M = M('cards');
         $content = $M->where($data)->find();
         if(!empty($content)){
-            echo "find";
+            //echo "find";
+            $indata["uid"] = $ccontent["uid"];
+            $indata['recharge_time'] = time();
+            $map["uid"] = $indata["uid"];
+            $Users = M('users');
+            $rf = $Users->where($map)->save(indata);
+            if($rf == 1){
+                echo "update suc";
+            }else{
+                echo "err";
+            }
         }else{
             $this->error(C('CARD_INPUT_ERROR'), U('Panel/recharge_page'),3);
         }

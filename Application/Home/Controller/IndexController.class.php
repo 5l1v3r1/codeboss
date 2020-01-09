@@ -56,13 +56,15 @@ class IndexController extends Controller {
 
         //$data['promoterid']= I('post.promoterid','','htmlspecialchars');//get name
         $Users = M('users');
-        $content = $Users->field('uid,register_code')->where($data)->find();
+        $cond['email'] = $data['email'];
+        $content = $Users->field('uid,register_code')->where($cond)->find();
         if(!empty($content))//exist
         {
             $this->error(' '.$data['uid'].' '.C('REGISTER_EXIST_ERROR'), U('Index/index'),3);
         }
         else{
             $data['register_code'] = rand(100000,999999);
+            $data['password'] = md5($data['password'])."==";
             $data['usertype'] = 'email';
             $data['loginip'] = getIp();
             $data['randomcode'] = substr($tokenstring,8,6);
@@ -76,7 +78,7 @@ class IndexController extends Controller {
             //echo $resflag;
             if($resflag == 1){
                 //$this->success(C('REGISTER_SUCCESS'),U('Order/orderlist?flag='.$flag),1);
-                echo C('REGISTER_SUCCESS');
+                //echo C('REGISTER_SUCCESS');
                 $this->success(C('REGISTER_SUCCESS'),U('Panel/index'),1);
                 //send email
             }else{
@@ -90,6 +92,80 @@ class IndexController extends Controller {
         $this->display(T('home/findpwdpage'));
     }
     public function post_find_pwd(){
+        $data['email']= I('post.email','','htmlspecialchars');//get name
+        $tokenstring = I('post.tokenstring','','htmlspecialchars');//get name
+        $cflag = 1;
+        $pattern = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
+        $matches = array();
+        preg_match($pattern, $data['email'], $matches);
+        if(count($matches) == 0){
+            $cflag = 0;
+        }
+        if(strlen($tokenstring) == 0){
+            $cflag = 0;
+        }
+        if($cflag == 0){
+            $this->error(' Sorry! '.C('FINDPWD_FAIL'), U('Index/login'),3);
+        }
+        $Users = M('users');
+        $content = $Users->field('password')->where($data)->find();
+        if(!empty($content))//exist
+        {
+            echo 'exit';
+            
+        }else{
+            $this->error(' Sorry! '.C('FINDPWD_FAIL'), U('Index/login'),3);
+        }
         //$this->display(T('home/findpwdpage'));
+    }
+
+    /* login page */
+    public function login(){
+        $this->display(T('home/loginpage'));
+    }
+    public function post_login_email(){
+        $data['password'] = I('post.password','','htmlspecialchars');//get name
+        $data['password'] = md5($data['password'])."==";
+        $data['email']= I('post.email','','htmlspecialchars');//get name
+        $tokenstring = I('post.tokenstring','','htmlspecialchars');//get name
+        cookie('tokenstr',null);
+        $cflag = 1;
+        $pattern = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
+        $matches = array();
+        preg_match($pattern, $data['email'], $matches);
+        if(count($matches) == 0){
+            $cflag = 0;
+        }
+        if(strlen($data['password']) == 0){
+            $cflag = 0;
+        }
+        if(strlen($tokenstring) == 0){
+            $cflag = 0;
+        }
+        if($cflag == 0){
+            $this->error(' Sorry! '.C('LOGIN_ERROR'), U('Index/index'),3);
+        }
+        /* check end */
+        $Users = M('users');
+        $content = $Users->field('uid')->where($data)->find();
+        //print_r($content);
+        if(!empty($content))//exist
+        {
+            $ud['loginip'] = getIp();
+            $ud['randomcode'] = substr($tokenstring,8,6);
+            $rf = $Users->where($data)->save($ud);
+            if($rf == 1){
+                $cookie_val = generateLoginToken($content['uid'],$ud['loginip'],$ud['randomcode']);
+                cookie('tokenstr',$cookie_val,3600*24);
+                //echo "login  succ";
+                $this->success(C('LOGIN_SUCCESS'),U('Panel/index'),1);
+            }else{
+                $this->error(' Sorry! '.C('LOGIN_ERROR'), U('Index/index'),3);
+            }
+            
+        }else{
+            $this->error(' Sorry! '.C('LOGIN_ERROR'), U('Index/index'),3);
+        }
+
     }
 }

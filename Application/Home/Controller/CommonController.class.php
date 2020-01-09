@@ -21,10 +21,11 @@ class CommonController extends Controller
 				$map['uid'] = $resarray[1];
 				$randomflag = $resarray[2];
 				$Users = M('users');
-				$content = $Users->field('uid,register_code,randomcode')->where($map)->find();
-				if($content["randomcode"] != $randomflag){
+				$ccontent = $Users->field('uid,register_code,randomcode')->where($map)->find();
+				if($ccontent["randomcode"] != $randomflag){
 					$this->error(C('Login_INFO'), U('Index/index'),3);
 				}
+				$g_uid = $ccontent["uid"];
 				/*else{
 					echo "y";
 				}*/

@@ -1,5 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -16,15 +15,15 @@
       
 </head>
 <body>
-        <style type="text/css">
-        /*闪动new小图标*/
-        .topnavli{position: relative}
-        .new{position: absolute;
-            top: 6px;
-            right: 8px;
-            width: 16px;
-            height: 18px;
-        }
+    <style type="text/css">
+    /*闪动new小图标*/
+    .topnavli{position: relative}
+    .new{position: absolute;
+        top: 6px;
+        right: 8px;
+        width: 16px;
+        height: 18px;
+    }
     </style>
     <header class="top">
         <!--[if lt IE 9]>
