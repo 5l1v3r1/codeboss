@@ -25,7 +25,6 @@ class CommonController extends Controller
 				if($ccontent["randomcode"] != $randomflag){
 					$this->error(C('Login_INFO'), U('Index/index'),3);
 				}
-				$g_uid = $ccontent["uid"];
 				/*else{
 					echo "y";
 				}*/

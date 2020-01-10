@@ -62,6 +62,7 @@ function decryptLoginToken($token,$ip){
     return $dec_tokenstring;
 
 }
+
 /**
  * 邮件发送函数
  */
@@ -86,6 +87,38 @@ function sendMail($to, $subject, $content) {
         return 0;
     } else{
         return 1;
+    }
+}
+/* get uid from cookie */
+function getInfoCookie(){
+    if(empty(cookie('tokenstr')))
+    {
+        //$this->error(C('Login_INFO'), U('Index/index'),3);
+        return [];
+    }else//whether is superadmin or not
+    {
+        $ip = getIp();
+        //$ip."$".$uid.'$'.$randomcode;
+        $decval = decryptLoginToken(cookie('tokenstr'),$ip);
+        $resarray = explode("$",$decval);
+        if(count($resarray) == 3 && $resarray[0] == $ip){
+            $map['uid'] = $resarray[1];
+            $randomflag = $resarray[2];
+            $Users = M('users');
+            $ccontent = $Users->where($map)->find();
+            if($ccontent["randomcode"] != $randomflag){
+                return [];
+            }
+            return $ccontent;
+            /*else{
+                echo "y";
+            }*/
+        }else{
+            return [];
+        }
+        //$content = $Users->field('uid,register_code')->where($data)->find();
+        //$decval = decryptLoginToken(cookie('tokenstr'),$data['randomcode']);
+        
     }
 }
 ?>

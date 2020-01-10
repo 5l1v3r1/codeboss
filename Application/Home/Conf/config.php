@@ -8,12 +8,15 @@ return array(
 	'REGISTER_SUCCESS'=>' Register se! email get check code to confirm ',
 	'REGISTER_FAIL'=>' CONTACT KEFU',
 
+	'COOKIE_LATE' => ' login session is dead!',
+
 	'Login_INFO' => 'Please login again!',
 	'LOGIN_ERROR' => 'LOGIN FAILE!',
 	'LOGIN_SUCCESS' => 'Login successfully!',
 
 	'VERIYCODE_INPUT_ERROR' => 'VERIYCODE ERROR',
 	'CARD_INPUT_ERROR' => 'CARD IS NOT EXIST!',
+	'CARD_USED_ERROR' => 'CARD IS USED !',
 
 	'FINDPWD_FAIL' => 'Find pwd fail! Email is not existed !',
 	//邮箱配置

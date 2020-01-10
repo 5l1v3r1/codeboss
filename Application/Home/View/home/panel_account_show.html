@@ -52,61 +52,67 @@
     <div class="paper">
         <div class="papercenter">
                     <!--<p class="paperinfo">若有通知，将会出现在这里</p>-->
-                    <div class="tabbable commitleft pull-left">
-                        <ul id="w0" class="nav nav-tabs copyload"><li class="active"><a href="/panel/account/index">基本信息</a></li>
-            <li><a href="/panel/account/purchase">充值记录</a></li>
-            <li><a href="/panel/account/change-password">修改密码</a></li>
-            <li><a href="/panel/account/weixin">微信绑定</a></li></ul>            <div class="tab-content">
-                            <ul class="tab-pane personinforlist active" id="personinfor">
-                                <li class="pername"></li>
-                                <li class="perinfor">
-                                    <span class="informark">用户名：</span>
-                                    <span class="inforvalue">taisite</span>
-                                </li>
-                                <li class="perinfor">
-                                    <span class="informark">账户类型：</span>
-                                    <span class="inforvalue">PaperPass用户</span>
-                                </li>
-                                                    <li class="perinfor">
-                                    <span class="informark">电子邮箱：</span>
-                                    <span class="inforvalue">zydaixie@126.com</span>
-                                </li>
-                                                                        <li class="perinfor">
-                                    <span class="informark">账户余额：</span>
-                                    <span class="inforvalue"> <span class="money">0</span> 元</span>
-                                </li>
-                                <li class="rechargeimg">
-                                        <span class="btnrecharge">
-                                            <a href="/panel/purchase"><img src="/images/tool/recharge.jpg">
-                                            <p class="initgreen">点此充值</p></a>
-                                        </span>
-                                </li>
-                                <li><button class="btn btn-modal btn-warning" href="/site/logout" data-method="post">退出登录</button></li>
-                                <li class="signtime MT20">注册时间： 2019-11-20 9:21:55</li>
-                            </ul>
-                        </div>
+            <div class="tabbable commitleft pull-left">
+                <ul id="w0" class="nav nav-tabs copyload">
+                    <li class="active">
+                        <a href="/panel/account/index">基本信息</a>
+                    </li>
+                    <li><a href="/panel/account/purchase">充值记录</a></li>
+                    <li><a href="/panel/account/change-password">修改密码</a></li>
+                    <li><a href="/panel/account/weixin">微信绑定</a></li>
+                </ul>            
+                <div class="tab-content">
+                    <ul class="tab-pane personinforlist active" id="personinfor">
+                        <li class="pername"></li>
+                        <li class="perinfor">
+                            <span class="informark">用户名：</span>
+                            <span class="inforvalue">{$info.username}</span>
+                        </li>
+                        <li class="perinfor">
+                            <span class="informark">账户类型：</span>
+                            <span class="inforvalue">{$info.usertype}用户</span>
+                        </li>
+                        <li class="perinfor">
+                            <span class="informark">电子邮箱：</span>
+                            <span class="inforvalue">{$info.email}</span>
+                        </li>
+                        <li class="perinfor">
+                            <span class="informark">账户余额：</span>
+                            <span class="inforvalue"> <span class="money">0</span> 元</span>
+                        </li>
+                        <li class="rechargeimg">
+                                <span class="btnrecharge">
+                                    <a href="/panel/purchase"><img src="/images/tool/recharge.jpg">
+                                    <p class="initgreen">点此充值</p></a>
+                                </span>
+                        </li>
+                        <li><button class="btn btn-modal btn-warning" href="/site/logout" data-method="post">退出登录</button></li>
+                        <li class="signtime MT20">注册时间： 2019-11-20 9:21:55</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pull-right">
+    
+                    <div class="processcenter">
+                        <ul class="processlist">
+                            <li class="processtitle">检测论文操作流程</li>
+                            <li class="process"><span class="circleul">1</span><span class="processintro">登录本网站（www.paperpass.com）</span></li>
+                            <li class="stripe"></li>
+                            <li class="process"><span class="circleul">2</span><span class="processintro">进入“充值中心”页面，计算充值金额，然后充值</span></li>
+                            <li class="stripe"></li>
+                            <li class="process"><span class="circleul">3</span><span class="processintro">进入“提交论文”页面，提交成功之后，在“查看报告”页面等待检测结果</span>
+                            </li>
+                        </ul>
+                        <ul class="processlist">
+                            <li class="processtitle">常见问题</li>
+                            <li><a href="/faq.htm#faq_articleclass" class="process" target="_blank">可以检测哪些类别的文章？</a></li>
+                            <li><a href="/faq.htm#faq_zhiwenku" class="process" target="_blank">比对指纹数据库有哪些？</a></li>
+                            <li><a href="/faq.htm#faq_large" class="process" target="_blank">单次最多可以提交多少字？</a></li>
+                            <li><a href="/faq.htm#faq_database" class="process" target="_blank">检测的论文是否会被添加到比对数据库？</a></li>
+                            <li><a href="/faq.htm#faq_results" class="process" target="_blank">提交论文后多久能获得检测报告？</a></li>
+                        </ul>
                     </div>
-                    <div class="pull-right">
-            
-                            <div class="processcenter">
-                                <ul class="processlist">
-                                    <li class="processtitle">检测论文操作流程</li>
-                                    <li class="process"><span class="circleul">1</span><span class="processintro">登录本网站（www.paperpass.com）</span></li>
-                                    <li class="stripe"></li>
-                                    <li class="process"><span class="circleul">2</span><span class="processintro">进入“充值中心”页面，计算充值金额，然后充值</span></li>
-                                    <li class="stripe"></li>
-                                    <li class="process"><span class="circleul">3</span><span class="processintro">进入“提交论文”页面，提交成功之后，在“查看报告”页面等待检测结果</span>
-                                    </li>
-                                </ul>
-                                <ul class="processlist">
-                                    <li class="processtitle">常见问题</li>
-                                    <li><a href="/faq.htm#faq_articleclass" class="process" target="_blank">可以检测哪些类别的文章？</a></li>
-                                    <li><a href="/faq.htm#faq_zhiwenku" class="process" target="_blank">比对指纹数据库有哪些？</a></li>
-                                    <li><a href="/faq.htm#faq_large" class="process" target="_blank">单次最多可以提交多少字？</a></li>
-                                    <li><a href="/faq.htm#faq_database" class="process" target="_blank">检测的论文是否会被添加到比对数据库？</a></li>
-                                    <li><a href="/faq.htm#faq_results" class="process" target="_blank">提交论文后多久能获得检测报告？</a></li>
-                                </ul>
-                            </div>
+            </div>
 
 
 
