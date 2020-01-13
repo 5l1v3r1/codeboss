@@ -27,6 +27,7 @@ class PanelController extends CommonController {
     }
     public function index(){
         //echo "hahaha";
+        $this->assign('activenavid',"index");
         $this->display(T('home/panel_index'));
     }
     public function account_page(){
@@ -35,12 +36,20 @@ class PanelController extends CommonController {
             $this->error(' Sorry! '.C('COOKIE_LATE'), U('Index/login'),3);
         }
         $this->assign('info',$info);// 赋值分页输出
+        $this->assign('activenavid',"account_page");
         $this->display(T('home/panel_account_show'));
+    }
+    public function account_recharge_record(){
+
+    }
+    public function change_password(){
+        
     }
     public function recharge_page(){
         //echo $g_uid;
         //$info = getInfoCookie();
         //print_r($info);
+        $this->assign('activenavid',"recharge_page");
         $this->display(T('home/panel_recharge_show'));
     }
     public function post_recharge(){

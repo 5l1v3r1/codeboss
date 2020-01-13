@@ -1,7 +1,7 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
-	'WEB_NAME' =>'codeboss',
+	'WEB_NAME' =>'codeeye',
 	'RECAPTCHAR'=>'6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
 	'REGISTER_EXIST_ERROR'=>' have exsited ! please find your password!',
 	'REGISTER_INPUT_ERROR'=>' INPUT ERROR!',

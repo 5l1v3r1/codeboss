@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-param" content="_csrf">
     <meta name="csrf-token" content="0BQ8Is-AyZe-vZaN_9eg5g31ST0_GHAbbSBFDNBXNea7ZFZPnviF-NPK-6Cysey2OL8PYm55Mk85ETVhpGNFoA==">
-    <title><?php echo C("WEB_NAME");;?>code检测</title>
+    <title>{:C("WEB_NAME");}code检测</title>
     <meta  name="description" content="★PaperPass★论文检测-全球首个中文论文相似度检测网站;提供论文查重,免费论文检测系统,毕业论文抄袭检测。最权威,动态指纹技术保障,已服务超300万人论文检测。"/>
     <meta name="keywords" content="论文,论文检测,论文查重,免费论文检测,检测系统,论文抄袭,毕业论文"/>
-    <link href="/codeboss/Public/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="/codeboss/Public/css/codecheck.css" rel="stylesheet">
-    <style>.groupline .form-group{display: inline-block;*display: inline;width: 200px;}</style>
+    <link href="__PUBLIC__/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/codecheck.css" rel="stylesheet">
+    <block name="headerlink"></block>
     <style>.groupline .form-group{display: inline-block;*display: inline;width: 200px;}</style>
 </head>
 <body>
@@ -21,11 +21,11 @@
         <![endif]-->
         <div class="topimg pull-left"><a href="/"><img src="/images/tool/logo.jpg" class="topimgsize"></a></div>
         <ul class="nav-tabs userpaper pull-left">
-        <li id="index" ><a href="<?php echo U('Panel/index');;?>">提交code</a></li>
+        <li id="index" ><a href="{:U('Panel/index');}">提交code</a></li>
         <li ><a href="/panel/report">查看报告</a></li>
         <li ><a href="/panel/selfbuild">自建库</a></li>
-        <li id="account_page" ><a href="<?php echo U('Panel/account_page');;?>">账户</a></li>
-        <li id="recharge_page"><a href="<?php echo U('Panel/recharge_page');;?>">充值中心</a></li>
+        <li id="account_page" ><a href="{:U('Panel/account_page');}">账户</a></li>
+        <li id="recharge_page"><a href="{:U('Panel/recharge_page');}">充值中心</a></li>
         <li ><a href="/panel/promotion">推广赚钱</a></li>
         <li ><a href="/panel/free">免费使用</a></li>
         <li><a href="https://pdf.wps.cn/?from=paperpass_normal&payconfig=pdf_module&position=paperpass_normal" target="_blank">PDF转换</a></li>
@@ -50,17 +50,16 @@
         <![endif]-->
     </header>
     <div class="flashInfo">hahah </div>
-    
-
-
-    <script src="/codeboss/Public/js/jquery.js"></script>
-    <script src="/codeboss/Public/bootstrap/bootstrap.js"></script>
-    <script src="/codeboss/Public/js/autowidth.js"></script>
+    <block name="mainbody">
+    </block>
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script src="__PUBLIC__/bootstrap/bootstrap.js"></script>
+    <script src="__PUBLIC__/js/autowidth.js"></script>
     <script>
-        $("#"+"<?php echo ($activenavid); ?>").addClass("active");
-        //console.log("<?php echo ($activenavid); ?>");
+        $("#"+"{$activenavid}").addClass("active");
+        //console.log("{$activenavid}");
     </script>
-    
-    
+    <block name="footscript">
+    </block>
 </body>
 </html>
