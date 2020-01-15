@@ -1,0 +1,208 @@
+[ 2020-01-16T00:00:03+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000039s ]
+
+[ 2020-01-16T00:00:05+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth_login/type/google
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+
+[ 2020-01-16T00:00:34+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQFgSlwvBWhHJ8E4qF0TSiE6MnESTHoxH1smZYGZjWRW5UDcf-zQrpIE7k32Nm7ajvT_RCrnp_hoDM8D0dGnufw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=3eb022541daab5c5db3549590d270a75a55b5a46..67c1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+ERR: 请求发生错误：Failed to connect to accounts.google.com port 443: Operation timed out
+
+[ 2020-01-16T00:15:14+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000173s ]
+NOTIC: [2] require_once(sdk/SDK.class.php): failed to open stream: No such file or directory /Users/nannanwu/www/codeboss/ThinkPHP/Library/Org/ThinkSDK/ThinkOauth.class.php 第 114 行.
+
+[ 2020-01-16T00:15:20+08:00 ] 127.0.0.1 /codeboss/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000173s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2020-01-16T00:15:22+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006075s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000051s ]
+
+[ 2020-01-16T00:15:23+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth_login/type/google
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+
+[ 2020-01-16T00:15:58+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQFjwm9xWohZZCYNyO_DJQoroRyn95rVEb6__OrxSdHKQTLyjmIxNAypwVzQWjdPu5n21-5dOMt1Dgjj_pzSeAI&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=9998a729a12aba598bc9ac324bd8b7869bba0f72..23ef
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+ERR: 请求发生错误：Failed to connect to accounts.google.com port 443: Operation timed out
+
+[ 2020-01-16T00:16:16+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQFjwm9xWohZZCYNyO_DJQoroRyn95rVEb6__OrxSdHKQTLyjmIxNAypwVzQWjdPu5n21-5dOMt1Dgjj_pzSeAI&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=9998a729a12aba598bc9ac324bd8b7869bba0f72..23ef
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+ERR: 请求发生错误：Failed to connect to accounts.google.com port 443: Operation timed out
+
+[ 2020-01-16T00:16:16+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQFjwm9xWohZZCYNyO_DJQoroRyn95rVEb6__OrxSdHKQTLyjmIxNAypwVzQWjdPu5n21-5dOMt1Dgjj_pzSeAI&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=9998a729a12aba598bc9ac324bd8b7869bba0f72..23ef
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+ERR: Think\Controller:google方法不存在！
+
+[ 2020-01-16T00:16:17+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQFjwm9xWohZZCYNyO_DJQoroRyn95rVEb6__OrxSdHKQTLyjmIxNAypwVzQWjdPu5n21-5dOMt1Dgjj_pzSeAI&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=9998a729a12aba598bc9ac324bd8b7869bba0f72..23ef
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined index: access_token /Users/nannanwu/www/codeboss/ThinkPHP/Library/Org/ThinkSDK/sdk/GoogleSDK.class.php 第 61 行.
+ERR: 获取 Google ACCESS_TOKEN出错：未知错误
+
+[ 2020-01-16T00:16:37+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQGAQhlGwjbddIz3YPgJbHxAyQ0YBaaPUZrO_ClvdseS8GXrlyJIpqsDYbYDKBwPfaTC8D-zyuA9EZocwbOG8_8&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=5142f486a31c7fe3db7a65563d7975d4418011c6..7fb3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+ERR: Think\Controller:google方法不存在！
+
+[ 2020-01-16T00:25:21+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQGZUo7NZI4Y0z9WEZCp9G3ui2_VmgCxGZAlvHnWVTQplELdS73dM2MGnO7EWHe2vtA_7ntQuGOdOlRy1WHS2CM&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=cf237feb45e342cacb08f872d850d12cf566d9fb..36c4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+ERR: Call to undefined method GoogleSDK::google()
+
+[ 2020-01-16T00:25:49+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQGZUo7NZI4Y0z9WEZCp9G3ui2_VmgCxGZAlvHnWVTQplELdS73dM2MGnO7EWHe2vtA_7ntQuGOdOlRy1WHS2CM&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=cf237feb45e342cacb08f872d850d12cf566d9fb..36c4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined index: access_token /Users/nannanwu/www/codeboss/ThinkPHP/Library/Org/ThinkSDK/sdk/GoogleSDK.class.php 第 61 行.
+ERR: 获取 Google ACCESS_TOKEN出错：未知错误
+
+[ 2020-01-16T00:25:58+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQGW6Oes82s_di_qFvEvTw5TANAEk2N37sb8mcF1C-OGAGYoY0pOZ6pJpXcuRB2uMi2zMkWuHigPp2qXdw54PLg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=f6106ab9962b8a77bfde87c9a66e8f1dd6babe6a..4237
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000055s ]
+ERR: Think\Controller:google方法不存在！
+
+[ 2020-01-16T00:39:31+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQFnoBiONIZ93LhduVjcDs5Ymf-T0RP5kqRRxlfeHAaEi8L3zNAO17E7xe6FQ1A40gE2JIbF0McJ85HMvlKFc8k&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=9219df2056242a77973088464a75b789f717a34d..9e06
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] Array to string conversion /Users/nannanwu/www/codeboss/Application/Home/Controller/IndexController.class.php 第 197 行.
+ERR: Think\Controller:google方法不存在！
+
+[ 2020-01-16T00:39:50+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQFnoBiONIZ93LhduVjcDs5Ymf-T0RP5kqRRxlfeHAaEi8L3zNAO17E7xe6FQ1A40gE2JIbF0McJ85HMvlKFc8k&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=9219df2056242a77973088464a75b789f717a34d..9e06
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined index: access_token /Users/nannanwu/www/codeboss/ThinkPHP/Library/Org/ThinkSDK/sdk/GoogleSDK.class.php 第 61 行.
+ERR: 获取 Google ACCESS_TOKEN出错：未知错误
+
+[ 2020-01-16T00:39:56+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvQF8wpAzfShbc89l3377vjxsAA02sVDyj47P6aldPipvRjYkX198eMimMwAtjvUiMjVCuRybnPFwvFH16BSXnDI&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=83f515762c9e488e4d2c643ea752a5149ecf1b70..0be9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+ERR: Think\Controller:google方法不存在！
+
+[ 2020-01-16T00:47:59+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/oauth/type/google?code=4%2FvgEUgSaGddrXvSH1cqGGm_Om8O584kLQbsQ22WHrCgUcgqLLA8zEEpeNRh2VLGgYmtZIDqLriQKtHs_HPMXaB-8&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&session_state=eef2cf141a2830b0ff48b4012035139e979f0fb5..3f01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+

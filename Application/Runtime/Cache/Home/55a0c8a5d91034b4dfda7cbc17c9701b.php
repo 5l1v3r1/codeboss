@@ -57,7 +57,7 @@
                             </div>
                             <div class="login-other">
                                 <div class="login-other-logo clearfix">
-                                        <a href="/site/social-login?social=qq"> google login
+                                        <a href="<?php echo U('Index/oauth_login',array('type'=>'google'));;?>"> google login
                                         <span class="loginlogo loglogo1"></span>
                                     </a>
                                     <a href="/site/social-login?social=weixin">

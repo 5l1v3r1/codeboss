@@ -1,0 +1,264 @@
+[ 2020-01-12T15:18:09+08:00 ] 127.0.0.1 /codeboss/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000181s ]
+
+[ 2020-01-12T15:18:17+08:00 ] 127.0.0.1 /codeboss/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002983s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2020-01-12T15:18:29+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/signup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2020-01-12T15:23:21+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/signup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+NOTIC: [2] file_put_contents(./Application/Runtime/Cache/Home/2c26cfb3bbc38fe49eafbf1b42aeaae2.php): failed to open stream: Permission denied /Users/nannanwu/www/codeboss/ThinkPHP/Library/Think/Storage/Driver/File.class.php 第 47 行.
+ERR: _STORAGE_WRITE_ERROR_:./Application/Runtime/Cache/Home/2c26cfb3bbc38fe49eafbf1b42aeaae2.php
+
+[ 2020-01-12T15:23:47+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/signup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2020-01-12T15:23:57+08:00 ] 127.0.0.1 /codeboss/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000056s ]
+
+[ 2020-01-12T15:23:59+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000032s ]
+
+[ 2020-01-12T15:24:50+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Index/post_login_email
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `db_users` [ RunTime:0.0024s ]
+SQL: SELECT `uid` FROM `db_users` WHERE `password` = 'e10adc3949ba59abbe56e057f20f883e==' AND `email` = '0@0.com' LIMIT 1   [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: HTTP_X_FORWARDED_FOR /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: HTTP_CLIENT_IP /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 8 行.
+SQL: UPDATE `db_users` SET `loginip`='127.0.0.1',`randomcode`='Qf2HdD' WHERE `password` = 'e10adc3949ba59abbe56e057f20f883e==' AND `email` = '0@0.com' [ RunTime:0.0540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000013s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002075s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000027s ]
+
+[ 2020-01-12T15:24:51+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Panel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: HTTP_X_FORWARDED_FOR /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: HTTP_CLIENT_IP /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `db_users` [ RunTime:0.0021s ]
+SQL: SELECT `uid`,`register_code`,`randomcode` FROM `db_users` WHERE `uid` = '0@0.com' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000033s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003471s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000021s ]
+
+[ 2020-01-12T15:24:57+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Panel/account_page
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+NOTIC: [8] Undefined index: HTTP_X_FORWARDED_FOR /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: HTTP_CLIENT_IP /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `db_users` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`register_code`,`randomcode` FROM `db_users` WHERE `uid` = '0@0.com' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: HTTP_X_FORWARDED_FOR /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: HTTP_CLIENT_IP /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 8 行.
+SQL: SELECT * FROM `db_users` WHERE `uid` = '0@0.com' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000058s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2020-01-12T15:25:24+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Panel/recharge_page
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined index: HTTP_X_FORWARDED_FOR /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: HTTP_CLIENT_IP /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `db_users` [ RunTime:0.0028s ]
+SQL: SELECT `uid`,`register_code`,`randomcode` FROM `db_users` WHERE `uid` = '0@0.com' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000077s ]
+
+[ 2020-01-12T15:25:24+08:00 ] 127.0.0.1 /codeboss/index.php/Home/images/tool/logo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+
+[ 2020-01-12T15:25:24+08:00 ] 127.0.0.1 /codeboss/index.php/Home/images/tool/kuaiqian.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+
+[ 2020-01-12T15:25:24+08:00 ] 127.0.0.1 /codeboss/index.php/Home/images/tool/wallet.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+
+[ 2020-01-12T15:25:24+08:00 ] 127.0.0.1 /codeboss/index.php/Home/Panel/verifycode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [8] Undefined index: HTTP_X_FORWARDED_FOR /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: HTTP_CLIENT_IP /Users/nannanwu/www/codeboss/Application/Home/Common/function.php 第 8 行.
+SQL: SHOW COLUMNS FROM `db_users` [ RunTime:0.0118s ]
+SQL: SELECT `uid`,`register_code`,`randomcode` FROM `db_users` WHERE `uid` = '0@0.com' LIMIT 1   [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+

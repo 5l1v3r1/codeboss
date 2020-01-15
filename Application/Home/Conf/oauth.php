@@ -1,6 +1,6 @@
 <?php
 //定义回调URL通用的URL
-define('URL_CALLBACK', 'http://'.$_SERVER['HTTP_HOST'].'/index.php/Home/Index/oauth/type/');
+define('URL_CALLBACK', 'http://'.$_SERVER['HTTP_HOST'].'/codeboss/index.php/Home/Index/oauth/type/');
 return array(
     //支付宝登录
     'THINK_SDK_ALIPAY' => array(

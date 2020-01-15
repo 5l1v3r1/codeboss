@@ -173,9 +173,13 @@ class IndexController extends Controller {
         $type=I('get.type');  //获取登录的方法
         import("Org.ThinkSDK.ThinkOauth");  ////加载ThinkOauth类
         $sdk=\ThinkOauth::getInstance($type); //实例化一个对象
+        //echo $sdk->getRequestCodeURL();
+        //exit();
         redirect($sdk->getRequestCodeURL());  //重定向到第三方登录授权页面
     }
-    public function oauth(){
+    public function oauth($type = null, $code = null){
+        //echo($_SERVER['HTTP_HOST']);
+        //exit();
         $type=I('get.type');
         $code=I('get.code');
         //加载ThinkOauth类并实例化一个对象
@@ -190,6 +194,10 @@ class IndexController extends Controller {
         //获取当前登录用户信息
         if(is_array($token)){
             // 获取第三方账号数据
+            
+            $dd = $sns->openid();
+            print_r($dd) ;
+            exit();
             $user_info = $this->$type($token);
             $data=array(
                 'oauth'         =>  $type,
