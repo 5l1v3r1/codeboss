@@ -168,4 +168,62 @@ class IndexController extends Controller {
         }
 
     }
+
+    public function oauth_login(){
+        $type=I('get.type');  //获取登录的方法
+        import("Org.ThinkSDK.ThinkOauth");  ////加载ThinkOauth类
+        $sdk=\ThinkOauth::getInstance($type); //实例化一个对象
+        redirect($sdk->getRequestCodeURL());  //重定向到第三方登录授权页面
+    }
+    public function oauth(){
+        $type=I('get.type');
+        $code=I('get.code');
+        //加载ThinkOauth类并实例化一个对象
+        import("Org.ThinkSDK.ThinkOauth");
+        $sns  = \ThinkOauth::getInstance($type);
+        //腾讯微博需传递的额外参数
+        $extend = null;
+        if($type == 'tencent'){
+            $extend = array('openid' => $this->_get('openid'), 'openkey' => $this->_get('openkey'));
+        }
+        $token = $sns->getAccessToken($code , $extend);
+        //获取当前登录用户信息
+        if(is_array($token)){
+            // 获取第三方账号数据
+            $user_info = $this->$type($token);
+            $data=array(
+                'oauth'         =>  $type,
+                'nickname'      =>  $user_info['nickname'],
+                'head_pic'      =>  $user_info['head_img'],
+                'openid'        =>  $token['openid'],
+                'access_token'  =>  $token['access_token'],
+                );
+            // 获取本地数据库的用户数据
+            print_r($data);
+            /*
+            $where['openid'] = $data['openid'];
+            $user_data=D('User')->where($where)->find();
+            // 如果登录过 则覆盖；没有登录这添加数据
+            if(empty($user_data)){
+                $data['reg_time'] = time();
+                $data['last_login'] = time();
+                $data['last_ip'] = getIP();
+                $id=M('User')->data($data)->add();
+            }else{
+                $data['last_login'] = time();
+                $data['last_ip'] = getIP();
+                $id=D('User')->where($where)->data($data)->save();
+            }
+            $login_info=array(
+                'user_id'=>$id,
+                'head_pic'=>$data['head_pic'],
+                'nickname'=>$data['nickname'],
+                );
+            session('user',$login_info);   //存数SESSION中，用于登陆后的一些操作
+    
+            $_COOKIE['this_url']=empty($_COOKIE['this_url']) ? 'http://www.xxxx.com' : cookie('this_url');  //获取登陆前的URL,获取不到则返回首页
+            redirect(cookie('this_url'));
+            */
+        }
+    }
 }
