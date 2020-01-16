@@ -76,7 +76,8 @@ class GoogleSDK extends ThinkOauth{
 		
 		$data = $this->call('userinfo');
 		if(!empty($data['id']))
-			return $data['id'];
+			//return $data['id'];
+			return $data;
 		else
 			throw new Exception('没有获取到 Google 用户ID！');
 	}

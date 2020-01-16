@@ -57,6 +57,7 @@ class IndexController extends Controller {
         //$data['promoterid']= I('post.promoterid','','htmlspecialchars');//get name
         $Users = M('users');
         $cond['email'] = $data['email'];
+        $cond['usertype'] = 'email';
         $content = $Users->field('uid,register_code')->where($cond)->find();
         if(!empty($content))//exist
         {
@@ -67,6 +68,7 @@ class IndexController extends Controller {
             $data['password'] = md5($data['password'])."==";
             $data['usertype'] = 'email';
             $data['loginip'] = getIp();
+            $data['logintime'] = date('Y-m-d H:i:s',time());//;
             $data['randomcode'] = substr($tokenstring,8,6);
             $cookie_val = generateLoginToken($data['uid'],$data['loginip'],$data['randomcode']);
             cookie('tokenstr',$cookie_val,3600*24);
@@ -108,6 +110,7 @@ class IndexController extends Controller {
             $this->error(' Sorry! '.C('FINDPWD_FAIL'), U('Index/login'),3);
         }
         $Users = M('users');
+        $data['usertype'] = 'email';
         $content = $Users->field('password')->where($data)->find();
         if(!empty($content))//exist
         {
@@ -127,6 +130,7 @@ class IndexController extends Controller {
         $data['password'] = I('post.password','','htmlspecialchars');//get name
         $data['password'] = md5($data['password'])."==";
         $data['email']= I('post.email','','htmlspecialchars');//get name
+        $data['usertype'] = 'email';
         $tokenstring = I('post.tokenstring','','htmlspecialchars');//get name
         cookie('tokenstr',null);
         $cflag = 1;
@@ -152,6 +156,7 @@ class IndexController extends Controller {
         if(!empty($content))//exist
         {
             $ud['loginip'] = getIp();
+            $ud['logintime'] = date('Y-m-d H:i:s',time());//;
             $ud['randomcode'] = substr($tokenstring,8,6);
             $rf = $Users->where($data)->save($ud);
             if($rf == 1){
@@ -191,23 +196,73 @@ class IndexController extends Controller {
             $extend = array('openid' => $this->_get('openid'), 'openkey' => $this->_get('openkey'));
         }
         $token = $sns->getAccessToken($code , $extend);
+        //echo $token;
         //获取当前登录用户信息
         if(is_array($token)){
             // 获取第三方账号数据
             
-            $dd = $sns->openid();
-            print_r($dd) ;
-            exit();
-            $user_info = $this->$type($token);
+            $user_info = $sns->openid();
+            //print_r($dd) ;
+            //exit();
+            //$user_info = $this->$type($token);
             $data=array(
-                'oauth'         =>  $type,
-                'nickname'      =>  $user_info['nickname'],
-                'head_pic'      =>  $user_info['head_img'],
-                'openid'        =>  $token['openid'],
-                'access_token'  =>  $token['access_token'],
+                'usertype'         =>  $type,
+                'username'      =>  $user_info['name'],
+                'image_url'      =>  $user_info['picture'],
+                'uid'        =>  $type.$user_info['id'],
+                'email'  =>  $user_info['email'],
+                'password' => uniqid().uniqid().'==',
+                'register_code' => 1
                 );
             // 获取本地数据库的用户数据
-            print_r($data);
+            $data['loginip'] = getIp();
+            $data['logintime'] = date('Y-m-d H:i:s',time());//
+            $data['randomcode'] = substr(uniqid(),2,6);
+            //print_r($data);
+            //exit();
+            cookie('tokenstr',null);
+            $Users = M('users');
+            $cond['usertype'] = $data['usertype'];
+            $cond['uid']  =  $data['uid'];
+            $content = $Users->field('uid')->where($cond)->find();
+            if(!empty($content))//exist
+            {
+                $ndata['loginip'] = getIp();
+                $ndata['logintime'] = date('Y-m-d H:i:s',time());//
+                $ndata['randomcode'] = substr(uniqid(),2,6);
+                $ndata['password'] = uniqid().uniqid().'==';
+                $rf = $Users->where($cond)->save($ndata);
+                if($rf == 1){
+                    $cookie_val = generateLoginToken($content['uid'],$ndata['loginip'],$ndata['randomcode']);
+                    cookie('tokenstr',$cookie_val,3600*24);
+                    //echo "login  succ";
+                    $this->success(C('LOGIN_SUCCESS'),U('Panel/index'),1);
+                }else{
+                    $this->error(' Sorry! '.C('LOGIN_ERROR'), U('Index/index'),3);
+                }
+
+                
+            }else{
+                $cookie_val = generateLoginToken($data['uid'],$data['loginip'],$data['randomcode']);
+                cookie('tokenstr',$cookie_val,3600*24);
+                //echo $cookie_val;
+                //echo "<br>";
+                //$decval = decryptLoginToken($cookie_val,$data['loginip']);
+                //echo $decval;
+                $resflag = $Users->data($data)->add();
+                //echo $resflag;
+                if($resflag == 1){
+                    echo "loginsuc";
+                    //$this->success(C('REGISTER_SUCCESS'),U('Order/orderlist?flag='.$flag),1);
+                    //echo C('REGISTER_SUCCESS');
+                    $this->success(C('LOGIN_SUCCESS'),U('Panel/index'),1);
+                    //send email
+                }else{
+                    echo "loginerror";
+                    $this->error(C('LOGIN_ERROR'), U('Index/index'),3); 
+                } 
+            }
+
             /*
             $where['openid'] = $data['openid'];
             $user_data=D('User')->where($where)->find();

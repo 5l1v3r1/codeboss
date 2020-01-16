@@ -57,11 +57,8 @@
                             </div>
                             <div class="login-other">
                                 <div class="login-other-logo clearfix">
-                                        <a href="<?php echo U('Index/oauth_login',array('type'=>'google'));;?>"> google login
+                                    <a href="<?php echo U('Index/oauth_login',array('type'=>'google'));;?>"> <img src="/codeboss/Public/images/google/1x/btn_google_signin_dark_pressed_web.png"/>
                                         <span class="loginlogo loglogo1"></span>
-                                    </a>
-                                    <a href="/site/social-login?social=weixin">
-                                        <span class="loginlogo loglogo2"></span>
                                     </a>
                                 </div>
                             </div>

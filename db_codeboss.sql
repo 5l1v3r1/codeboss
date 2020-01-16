@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 09, 2020 at 11:45 PM
+-- Generation Time: Jan 16, 2020 at 01:49 AM
 -- Server version: 5.7.28-0ubuntu0.16.04.2-log
 -- PHP Version: 5.6.37-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -76,6 +76,7 @@ CREATE TABLE `db_users` (
   `register_code` int(6) NOT NULL,
   `usertype` char(10) COLLATE utf8_unicode_ci NOT NULL,
   `loginip` char(20) COLLATE utf8_unicode_ci NOT NULL,
+  `logintime` datetime DEFAULT NULL,
   `randomcode` char(6) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -83,8 +84,10 @@ CREATE TABLE `db_users` (
 -- Dumping data for table `db_users`
 --
 
-INSERT INTO `db_users` (`uid`, `username`, `password`, `email`, `image_url`, `createtime`, `register_code`, `usertype`, `loginip`, `randomcode`) VALUES
-('0@0.com', 'afe123_', 'e10adc3949ba59abbe56e057f20f883e==', '0@0.com', 'head.gif', '2020-01-09 16:17:28', 137832, 'email', '127.0.0.1', 'T9h-n5');
+INSERT INTO `db_users` (`uid`, `username`, `password`, `email`, `image_url`, `createtime`, `register_code`, `usertype`, `loginip`, `logintime`, `randomcode`) VALUES
+('0@0.com', 'afe123_', 'e10adc3949ba59abbe56e057f20f883e==', '0@0.com', 'head.gif', '2020-01-09 16:17:28', 137832, 'email', '127.0.0.1', NULL, 'RxOTLy'),
+('beautyhc002@gmail.com', 'afe123_', '25d55ad283aa400af464c76d713c07ad==', 'beautyhc002@gmail.com', 'head.gif', '2020-01-16 15:47:47', 724780, 'email', '127.0.0.1', '2020-01-16 15:48:46', 'RZcM11'),
+('google116833394519266386039', 'FengNan Wu', '5e201691b2d085e201691b2d64==', 'beautyhc002@gmail.com', 'https://lh6.googleusercontent.com/-d_xvnpdPEs0/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rf1UC2CE3P_KKUgD0KkijhpXFMv1A/photo.jpg', '2020-01-16 15:43:29', 1, 'google', '127.0.0.1', '2020-01-16 15:53:53', '201691');
 
 --
 -- Indexes for dumped tables
